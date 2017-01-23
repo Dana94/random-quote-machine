@@ -1,10 +1,32 @@
-button{
+#new-quote{
+	font-size: 30px;
+	margin-top: 10px;
 	/*display: block;
 	margin-left: auto;
 	margin-right: auto;*/
 
 }
 
-body{
+body .well{
 	padding-top: 10px;
+	font-size: 25px;
+	font-style: italic;
+	font-family: serif;
+	font-weight: 100;
+}
+
+.progress-bar{
+	color: black;
+	
+}
+
+body .container-fluid, html{
+	background-color: #7144A1;
+}
+
+#frame{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 5%;
 }
