@@ -69,26 +69,54 @@ let quotes = [{
 			  	'author': 'M.F.K. Fisher',
 			  	'description': '',
 			  	'shown': false
+			  },
+			  {
+			  	'quote': '\"It does not do to leave a live dragon out of your calculations, ' + 
+			  				'if you live near him.',
+			  	'author': 'J.R.R. Tolkien',
+			  	'description': 'Novelist and philologist',
+			  	'shown': false 
+			  },
+			  {
+			  	'quote': '\"The Universe is under no obligation to make sense to you.\"',
+			  	'author': 'Neil deGrasse Tyson',
+			  	'description': '',
+			  	'shown': false
+
 			  }
+
 
 			 ];
 
-//let index = 0;
-let progress = 0;
 
-newQuote.addEventListener('click', function(){
+let progress = 0;
+let increment = Math.ceil(100/quotes.length);
+
+function reset(){
+	$('#button-place').html('<button class="btn btn-danger" id="new-quote">New Quote</button>');
+    newQuote = document.getElementById('new-quote');
+    newQuote.addEventListener('click', displayQuotes);
+    progress = 0;
+}
+
+function displayQuotes(){
 	let index = Math.floor(Math.random() * quotes.length);
+
 	
-	if(quotes[index].shown == false){
+		while(quotes[index].shown != false){
+			index = Math.floor(Math.random() * quotes.length);
+		}
+
 		let text =  quotes[index].quote + '<br> -' + quotes[index].author;
 		quotes[index].shown = true;
 		$('#quote-placeholder').html(text);
-		progress += 10;
-		$('.progress-bar').css('width', progress + '%');
-	}
-	
-	//index++;
-	
+		progress += increment;
+		$('.progress-bar').css('width', progress + '%');	
 
-	
-});
+		if(progress >= 100){
+			$('#button-place').html('<button class="btn btn-danger" id="reset">Finished, start again?</button>');
+			document.getElementById('reset').addEventListener('click', reset);
+		}
+}
+
+newQuote.addEventListener('click', displayQuotes);
