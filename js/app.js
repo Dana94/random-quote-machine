@@ -1,6 +1,7 @@
 let newQuote = document.getElementById('new-quote');
 let quotePlace = document.getElementById('quote-placeholder');
-
+let twitterButton =document.getElementById('tweet');
+$('#tweet').hide();
 
 let quotes = [{
 				'quote': '\"People will forget what you said and did, but they will never ' +
@@ -93,16 +94,21 @@ let progress = 0;
 let increment = Math.ceil(100/quotes.length);
 
 function reset(){
+	for(let i = 0; i < quotes.length; i++){
+		quotes[i].shown = false;
+	}
+	console.log(quotes[0]);
 	$('#button-place').html('<button class="btn btn-danger" id="new-quote">New Quote</button>');
     newQuote = document.getElementById('new-quote');
     newQuote.addEventListener('click', displayQuotes);
     progress = 0;
+    $('.progress-bar').css('width', progress + '%');
 }
 
 function displayQuotes(){
+	$('#tweet').show();
 	let index = Math.floor(Math.random() * quotes.length);
 
-	
 		while(quotes[index].shown != false){
 			index = Math.floor(Math.random() * quotes.length);
 		}
@@ -114,7 +120,7 @@ function displayQuotes(){
 		$('.progress-bar').css('width', progress + '%');	
 
 		if(progress >= 100){
-			$('#button-place').html('<button class="btn btn-danger" id="reset">Finished, start again?</button>');
+			$('#button-place').html('<button class="btn btn-danger" id="reset">Reset</button>');
 			document.getElementById('reset').addEventListener('click', reset);
 		}
 }
