@@ -1,16 +1,11 @@
 #new-quote, #reset{
 	font-size: 30px;
 	margin-top: 10px;
-	/*display: block;
-	margin-left: auto;
-	margin-right: auto;*/
-
 }
 
 #tweet{
 	width: 20px;
 	padding-left: 78rem;
-
 }
 
 #tweet, i{
@@ -20,14 +15,7 @@
 body .well{
 	padding-top: 10px;
 	font-size: 25px;
-	font-style: italic;
 	font-family: serif;
-	font-weight: 100;
-}
-
-.progress-bar{
-	color: black;
-	
 }
 
 body .container-fluid, html{
