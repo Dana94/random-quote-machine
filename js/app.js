@@ -110,8 +110,9 @@ function displayQuotes(){
 		}
 }
 
-function tweetQuote(){
-	twitterButton.href += encodeURI(quote) + ' -' + encodeURI(author);
+function tweetQuote(){let href = 'https://twitter.com/intent/tweet?text=';
+	twitterButton.href = href + encodeURI(quote) + ' -' + encodeURI(author);
+	
 }
 
 newQuote.addEventListener('click', displayQuotes);

@@ -1,11 +1,18 @@
 #new-quote, #reset{
 	font-size: 30px;
 	margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #tweet{
 	width: 20px;
-	padding-left: 78rem;
+  display: block;
+}
+
+#twitter-row{
+	padding-left: 90%; 
 }
 
 #tweet, i{
