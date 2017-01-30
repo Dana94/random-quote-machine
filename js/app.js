@@ -92,27 +92,27 @@ function displayQuotes(){
 	$('#tweet').show();
 	let index = Math.floor(Math.random() * quotes.length);
 
-		while(quotes[index].shown != false){
-			index = Math.floor(Math.random() * quotes.length);
-		}
+	while(quotes[index].shown != false){
+		index = Math.floor(Math.random() * quotes.length);
+	}
 
-		quote = quotes[index].quote;
-		author = quotes[index].author;
-		let text =  quote + '<br> -' + author;
-		quotes[index].shown = true;
-		$('#quote-placeholder').html(text);
-		progress += increment;
-		$('.progress-bar').css('width', progress + '%');	
+	quote = quotes[index].quote;
+	author = quotes[index].author;
+	let text =  quote + '<br> -' + author;
+	quotes[index].shown = true;
+	$('#quote-placeholder').html(text);
+	progress += increment;
+	$('.progress-bar').css('width', progress + '%');	
 
-		if(progress >= 100){
-			$('#button-place').html('<button class="btn btn-danger" id="reset">Reset</button>');
-			document.getElementById('reset').addEventListener('click', reset);
-		}
+	if(progress >= 100){
+		$('#button-place').html('<button class="btn btn-danger" id="reset">Reset</button>');
+		document.getElementById('reset').addEventListener('click', reset);
+	}
 }
 
-function tweetQuote(){let href = 'https://twitter.com/intent/tweet?text=';
+function tweetQuote(){
+	let href = 'https://twitter.com/intent/tweet?text=';
 	twitterButton.href = href + encodeURI(quote) + ' -' + encodeURI(author);
-	
 }
 
 newQuote.addEventListener('click', displayQuotes);
