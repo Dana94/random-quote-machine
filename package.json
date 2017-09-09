@@ -1,0 +1,19 @@
+{
+  "name": "random-quote-machine",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dana94/random-quote-machine.git"
+  },
+  "author": "Dana Ottaviani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dana94/random-quote-machine/issues"
+  },
+  "homepage": "https://github.com/Dana94/random-quote-machine#readme",
+  "description": "Randm quote generator\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[De"
+}
