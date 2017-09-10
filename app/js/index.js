@@ -11,6 +11,7 @@ var parser = csv.parse({delimiter: ','}, function(err, data){
 
 });
 
+console.log('hi');
 //csv to read through the parser
-fs.createReadStream('../quotes.csv').pipe(parser);
+//fs.createReadStream('../quotes.csv').pipe(parser);
 

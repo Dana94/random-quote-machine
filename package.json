@@ -15,5 +15,9 @@
     "url": "https://github.com/Dana94/random-quote-machine/issues"
   },
   "homepage": "https://github.com/Dana94/random-quote-machine#readme",
-  "description": "Randm quote generator\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[De"
+  "description": "Randm quote generator\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[De",
+  "dependencies": {
+    "csv": "^1.1.1",
+    "fs": "0.0.1-security"
+  }
 }
