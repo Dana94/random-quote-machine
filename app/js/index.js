@@ -1,5 +1,6 @@
 const csv = require('csv');
-const fs = require('fs');
+//const fs = require('fs');
+var fs = require('browserify-fs');
 
 let newQuote = document.getElementById('new-quote');
 let quotePlace = document.getElementById('quote-placeholder');
