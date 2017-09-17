@@ -28,7 +28,7 @@ $('#tweet').hide();
 
 
 let progress = 0;
-let increment = Math.ceil(100/quotes.length);
+//let increment = Math.ceil(100/quotes.length);
 let quote;
 let author;
 
@@ -40,8 +40,8 @@ function reset(){
 	$('#button-place').html('<button class="btn btn-danger" id="new-quote">New Quote</button>');
     newQuote = document.getElementById('new-quote');
     newQuote.addEventListener('click', displayQuotes);
-    progress = 0;
-    $('.progress-bar').css('width', progress + '%');
+    //progress = 0;
+    //$('.progress-bar').css('width', progress + '%');
 }
 
 function displayQuotes(){
@@ -58,13 +58,13 @@ function displayQuotes(){
 		let text =  quote + '<br> -' + author;
 		//quotes[index].shown = true;
 		$('#quote-placeholder').html(text);
-		progress += increment;
-		$('.progress-bar').css('width', progress + '%');	
+		// progress += increment;
+		// $('.progress-bar').css('width', progress + '%');	
 
-		if(progress >= 100){
-			$('#button-place').html('<button class="btn btn-danger" id="reset">Reset</button>');
-			document.getElementById('reset').addEventListener('click', reset);
-		}
+		// if(progress >= 100){
+		// 	$('#button-place').html('<button class="btn btn-danger" id="reset">Reset</button>');
+		// 	document.getElementById('reset').addEventListener('click', reset);
+		// }
 
 	});
 
