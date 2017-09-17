@@ -70,7 +70,8 @@ function displayQuotes(){
 	});
 
 	//csv to read through the parser
-	fs.createReadStream(__dirname + '/quotes.csv').pipe(parser);	
+	// __dirname + 
+	fs.createReadStream('app/js/quotes.csv').pipe(parser);	
 }
 
 function tweetQuote(){
