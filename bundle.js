@@ -6296,7 +6296,7 @@ function displayQuotes(){
 
 	//csv to read through the parser
 	// __dirname + 
-	fs.createReadStream('./quotes.csv').pipe(parser);	
+	fs.createReadStream('app/js/quotes.csv').pipe(parser);	
 }
 
 function tweetQuote(){
